@@ -1,5 +1,5 @@
-drop database if exists furama;
-create database furama;
+-- drop database if exists furama;
+-- create database furama;
 use furama;
 
 create table vi_tri (

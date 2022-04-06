@@ -60,16 +60,18 @@
 <div id="all-content-div">
     <div class="img-head-title">
         <div id="img"><img width="240"
-                src="https://upload.wikimedia.org/wikipedia/vi/4/42/%C3%81p_ph%C3%ADch_phim_M%E1%BA%AFt_bi%E1%BA%BFc.jpg"
-                alt="">
+                           src="https://upload.wikimedia.org/wikipedia/vi/4/42/%C3%81p_ph%C3%ADch_phim_M%E1%BA%AFt_bi%E1%BA%BFc.jpg"
+                           alt="">
         </div>
         <div class="rightside">
             <h1>Mắt Biếc</h1>
             <p>Một tác phẩm được nhiều người bình chọn là hay nhất của nhà văn này. Một tác phẩm đang được dịch và giới
                 thiệu tại
-                Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn khi
+                Nhật Bản (theo thông tin từ các báo)… Bởi sự trong sáng của một tình cảm, bởi cái kết thúc rất, rất buồn
+                khi
                 suốt
-                câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng bởi,
+                câu chuyện vẫn là những điều vui, buồn lẫn lộn (cái kết thúc không như mong đợi của mọi người). Cũng
+                bởi,
                 mắt biếc…
                 năm xưa nay đâu (theo lời một bài hát).</p>
             <div class="menu">
@@ -88,7 +90,7 @@
     <br>
     <h2 id="chuong-1">Mắt biếc - Chương 01</h2>
     <p>HỒI CÒN NHỎ, NHỎ XÍU, TÔI KHÔNG CÓ bạn gái. Suốt ngày tôi chỉ chơi với... mẹ tôi và bà nội tôi. Mẹ tôi rất thương
-        tôi nhưng vìmẹ sợ ba nên ít khi mẹ che chở được tôi trước những trận đòn của ba tôi. Bà tôi thì lại khác. Bà
+        tôi nhưng vì mẹ sợ ba nên ít khi mẹ che chở được tôi trước những trận đòn của ba tôi. Bà tôi thì lại khác. Bà
         sinh ra ba nên ba phải sợ bà. Điều đó thật may mắn đối với tôi.</p>
     <p>Hồi nhỏ tôi rất nghịch, ăn đòn khá thường xuyên. Điềi đó buộc đầu óc non nớt của tôi phải tìm cách đối phó với
         những trận đòn trừng phạt của ba tôi. Mỗi lần phạm lỗi, hễ thấy ba tôi dợm rút cây roi mây ra khỏi vách là tôi
@@ -200,5 +202,29 @@
     <p>- Hết rồi.</p>
     <p>- Hết sao Ngạn còn khóc?</p>
     <p>Vì Ngạn nhớ Hà Lan</p></div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 </body>
+<script>
+    //Get the button:
+    mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 1800 || document.documentElement.scrollTop > 1800) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
 </html>

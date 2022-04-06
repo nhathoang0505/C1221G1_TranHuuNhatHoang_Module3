@@ -9,9 +9,11 @@ h1 {
 h2 {
     text-align: center;
 }
-p{
+
+p {
     text-align: justify;
 }
+
 #chuong-1 {
     font-size: 30px;
     background: -webkit-linear-gradient(#eee, #333);
@@ -55,7 +57,7 @@ p{
 }
 
 .dropdown {
-    float: inside   ;
+    float: inside;
 }
 
 #all-content-div {
@@ -65,4 +67,24 @@ p{
 
 style {
     background-color: bisque;
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: darkslategray; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
 }

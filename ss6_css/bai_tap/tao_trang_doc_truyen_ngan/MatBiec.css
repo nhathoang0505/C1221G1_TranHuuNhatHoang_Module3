@@ -1,0 +1,68 @@
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+p{
+    text-align: justify;
+}
+#chuong-1 {
+    font-size: 30px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#chuong-2 {
+    font-size: 30px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#chuong-3 {
+    font-size: 30px;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.img-head-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#img {
+    width: 70%;
+}
+
+.rightside {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rightside h1 {
+    margin: 0;
+}
+
+.dropdown {
+    float: inside   ;
+}
+
+#all-content-div {
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+style {
+    background-color: bisque;
+}

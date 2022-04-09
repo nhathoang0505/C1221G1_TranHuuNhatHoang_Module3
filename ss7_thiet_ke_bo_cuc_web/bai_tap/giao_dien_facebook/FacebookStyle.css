@@ -255,7 +255,8 @@ body {
 }
 
 .post__image img {
-    width: 100%;
+    margin-left: 150px;
+    width: 70%;
 }
 
 .post__top {

@@ -1,11 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Facebook Clone</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="FacebookStyle.css">
 </head>
-
 <body>
+<!-- header starts -->
+<div class="header">
+    <div class="header__left">
+        <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png"
+                alt=""
+        />
+        <div class="header__input">
+            <span class="material-icons"> search </span>
+            <input type="text" placeholder="Search Facebook"/>
+        </div>
+    </div>
 
+    <div class="header__middle">
+        <div class="header__option active">
+            <span class="material-icons"> home </span>
+        </div>
+        <div class="header__option">
+            <span class="material-icons"> flag </span>
+        </div>
+        <div class="header__option">
+            <span class="material-icons"> subscriptions </span>
+        </div>
+        <div class="header__option">
+            <span class="material-icons"> storefront </span>
+        </div>
+        <div class="header__option">
+            <span class="material-icons"> supervised_user_circle </span>
+        </div>
+    </div>
+
+    <div class="header__right">
+        <div class="header__info">
+            <img
+                    class="user__avatar"
+                    src="https://scontent.fdad1-2.fna.fbcdn.net/v/t39.30808-6/273145362_2290976097709082_2050556686581976921_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=eULBEklJoosAX-rw-aw&_nc_ht=scontent.fdad1-2.fna&oh=00_AT-lrVQz5D-Zy1g_Jn8Qi_2eR4jx045njUg_6LCGjqqthg&oe=62559933"
+                    alt=""
+            />
+            <h4>Nhật Hoàng</h4>
+        </div>
+        <span class="material-icons"> add </span>
+        <span class="material-icons"> forum </span>
+        <span class="material-icons"> notifications_active </span>
+        <span class="material-icons"> expand_more </span>
+    </div>
+</div>
+<!-- header ends -->
+
+<!-- main body starts -->
+<div class="main__body">
+    <!-- sidebar starts -->
+    <div class="sidebar">
+        <div class="sidebarRow">
+            <img
+                    class="user__avatar"
+                    src="https://scontent.fdad1-2.fna.fbcdn.net/v/t39.30808-6/273145362_2290976097709082_2050556686581976921_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=eULBEklJoosAX-rw-aw&_nc_ht=scontent.fdad1-2.fna&oh=00_AT-lrVQz5D-Zy1g_Jn8Qi_2eR4jx045njUg_6LCGjqqthg&oe=62559933"
+                    alt=""
+            />
+            <h4>Nhật Hoàng</h4>
+        </div>
+
+        <div class="sidebarRow">
+            <span class="material-icons"> local_hospital </span>
+            <h4>Covid - 19 Information Center</h4>
+        </div>
+
+        <div class="sidebarRow">
+            <span class="material-icons"> emoji_flags </span>
+            <h4>Pages</h4>
+        </div>
+
+        <div class="sidebarRow">
+            <span class="material-icons"> people </span>
+            <h4>People</h4>
+        </div>
+
+        <div class="sidebarRow">
+            <span class="material-icons"> chat </span>
+            <h4>Messenger</h4>
+        </div>
+
+        <div class="sidebarRow">
+            <span class="material-icons"> storefront </span>
+            <h4>Marketplace</h4>
+        </div>
+
+        <div class="sidebarRow">
+            <span class="material-icons"> video_library </span>
+            <h4>Videos</h4>
+        </div>
+
+        <div class="sidebarRow">
+            <span class="material-icons"> expand_more </span>
+            <h4>More</h4>
+        </div>
+    </div>
+    <!-- sidebar ends -->
+
+    <!-- feed starts -->
+    <div class="feed">
+        <div class="storyReel">
+            <!-- story starts -->
+            <div
+                    style="
+              background-image: url('https://idalat.vn/blog/wp-content/uploads/sites/2/2020/12/rung-thong-da-lat-3.jpg');
+            "
+                    class="story"
+            >
+                <img
+                        class="user__avatar story__avatar"
+                        src="https://scontent.fdad1-2.fna.fbcdn.net/v/t39.30808-6/273145362_2290976097709082_2050556686581976921_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=eULBEklJoosAX-rw-aw&_nc_ht=scontent.fdad1-2.fna&oh=00_AT-lrVQz5D-Zy1g_Jn8Qi_2eR4jx045njUg_6LCGjqqthg&oe=62559933"
+                        alt=""
+                />
+                <h4>Nhật Hoàng</h4>
+            </div>
+            <!-- story ends -->
+
+            <!-- story starts -->
+            <div
+                    style="
+              background-image: url('https://cellularnews.com/wp-content/uploads/2020/04/Delete-photo-337x600.jpg');
+            "
+                    class="story"
+            >
+                <img
+                        class="user__avatar story__avatar"
+                        src="https://scontent.fdad1-2.fna.fbcdn.net/v/t39.30808-6/273145362_2290976097709082_2050556686581976921_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=eULBEklJoosAX-rw-aw&_nc_ht=scontent.fdad1-2.fna&oh=00_AT-lrVQz5D-Zy1g_Jn8Qi_2eR4jx045njUg_6LCGjqqthg&oe=62559933"
+                        alt=""
+                />
+                <h4>Nhật Hoàng</h4>
+            </div>
+            <!-- story ends -->
+
+            <!-- story starts -->
+            <div
+                    style="
+              background-image: url('https://scontent.fdad1-1.fna.fbcdn.net/v/t1.6435-9/126255122_859268278178378_6750295607482852349_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=174925&_nc_ohc=IH7gDMvDZnIAX_WVfPu&_nc_ht=scontent.fdad1-1.fna&oh=00_AT-xTMroR2TbahhWTfJVlzvgZIJb6IqYdTIdFFr5QthHnA&oe=62786CB4');
+            "
+                    class="story"
+            >
+                <img
+                        class="user__avatar story__avatar"
+                        src="https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg"
+                        alt=""
+                />
+                <h4>Phan An</h4>
+            </div>
+            <!-- story ends -->
+
+            <!-- story starts -->
+            <!-- story ends -->
+        </div>
+
+        <!-- message sender starts -->
+        <div class="messageSender">
+            <div class="messageSender__top">
+                <img
+                        class="user__avatar"
+                        src="https://scontent.fdad1-2.fna.fbcdn.net/v/t39.30808-6/273145362_2290976097709082_2050556686581976921_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=eULBEklJoosAX-rw-aw&_nc_ht=scontent.fdad1-2.fna&oh=00_AT-lrVQz5D-Zy1g_Jn8Qi_2eR4jx045njUg_6LCGjqqthg&oe=62559933"
+                        alt=""
+                />
+                <form>
+                    <input class="messageSender__input" placeholder="What's on your mind?" type="text"/>
+                </form>
+            </div>
+
+            <div class="messageSender__bottom">
+                <div class="messageSender__option">
+                    <span style="color: red" class="material-icons"> videocam </span>
+                    <h3>Live</h3>
+                </div>
+
+                <div class="messageSender__option">
+                    <span style="color: green" class="material-icons"> photo_library </span>
+                    <h3>Photo</h3>
+                </div>
+
+                <div class="messageSender__option">
+                    <span style="color: orange" class="material-icons"> insert_emoticon </span>
+                    <h3>Feeling</h3>
+                </div>
+            </div>
+        </div>
+        <!-- message sender ends -->
+
+        <!-- post starts -->
+        <div class="post">
+            <div class="post__top">
+                <img
+                        class="user__avatar post__avatar"
+                        src="https://scontent.fdad1-2.fna.fbcdn.net/v/t39.30808-6/273145362_2290976097709082_2050556686581976921_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=eULBEklJoosAX-rw-aw&_nc_ht=scontent.fdad1-2.fna&oh=00_AT-lrVQz5D-Zy1g_Jn8Qi_2eR4jx045njUg_6LCGjqqthg&oe=62559933"
+                        alt=""
+                />
+                <div class="post__topInfo">
+                    <h3>Nhật Hoàng</h3>
+                    <p>25 April at 20:30</p>
+                </div>
+            </div>
+
+            <div class="post__bottom">
+                <p>Rừng thông Đà Lạt</p>
+            </div>
+
+            <div class="post__image">
+                <img src="https://idalat.vn/blog/wp-content/uploads/sites/2/2020/12/rung-thong-da-lat-3.jpg" alt="">
+            </div>
+
+            <div class="post__options">
+                <div class="post__option">
+                    <span class="material-icons"> thumb_up </span>
+                    <p>Like</p>
+                </div>
+
+                <div class="post__option">
+                    <span class="material-icons"> chat_bubble_outline </span>
+                    <p>Comment</p>
+                </div>
+
+                <div class="post__option">
+                    <span class="material-icons"> near_me </span>
+                    <p>Share</p>
+                </div>
+            </div>
+        </div>
+        <!-- post ends -->
+    </div>
+    <!-- feed ends -->
+
+    <div style="flex: 0.33" class="widgets">
+        <div
+                class="fb-page"
+                data-href="https://www.facebook.com/facebook"
+                data-tabs="timeline"
+                data-width="500"
+                data-height="1000"
+                data-small-header="false"
+                data-adapt-container-width="true"
+                data-hide-cover="false"
+                data-show-facepile="true"
+        >
+            <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/facebook">Facebook</a>
+            </blockquote>
+        </div>
+    </div>
+</div>
+<!-- main body ends -->
+
+<div id="fb-root"></div>
+<script
+        async
+        defer
+        crossorigin="anonymous"
+        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0"
+        nonce="zUxEq08J"
+></script>
 </body>
 </html>

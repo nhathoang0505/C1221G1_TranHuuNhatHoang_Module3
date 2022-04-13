@@ -19,22 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd640603-260d-47e9-afee-603ff573de44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss8_bootstrap/bai_tap/landingpage/LandingPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss9_tong_quan_ve_ung_dung_web/thuc_hanh/chuyen_doi_tien_te/src/main/java/ConverterServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss9_tong_quan_ve_ung_dung_web/thuc_hanh/hello_admin/src/main/java/LoginServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ss9_tong_quan_ve_ung_dung_web/thuc_hanh/tu_dien_don_gian/src/main/java/TranslationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/module3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/module3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-    </list>
+    <list default="true" id="fd640603-260d-47e9-afee-603ff573de44" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -171,7 +156,7 @@
       <option name="presentableId" value="Default" />
       <updated>1649753501567</updated>
       <workItem from="1649753507960" duration="1162000" />
-      <workItem from="1649757769888" duration="346000" />
+      <workItem from="1649757769888" duration="707000" />
     </task>
     <servers />
   </component>

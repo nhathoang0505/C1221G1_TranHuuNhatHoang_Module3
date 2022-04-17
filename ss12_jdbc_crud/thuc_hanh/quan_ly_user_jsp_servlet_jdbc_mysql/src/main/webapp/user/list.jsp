@@ -20,6 +20,19 @@
     </h2>
 </center>
 <div align="center">
+    <form action="/users" method="get">
+        <input type="text" placeholder="input country" name="search">
+        <button type="submit">Search</button>
+        <input type="hidden" name="action" value="search">
+    </form>
+    <form action="/users" method="get">
+        <select name="sort" id="sort">
+            <option value="ascending">Sort low to high</option>
+            <option value="descending">Sort high to low</option>
+        </select>
+        <input type="hidden" name="action" value="sort">
+        <button type="submit">sort</button>
+    </form>
     <table border="1" cellpadding="5">
         <caption><h2>List of Users</h2></caption>
         <tr>

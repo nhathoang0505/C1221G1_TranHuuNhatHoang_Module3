@@ -3,16 +3,16 @@ package controller;
 import model.User;
 import repository.UserRepository;
 
-import java.io.IOException;
-import java.sql.SQLException;
-import java.util.List;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet(name = "UserServlet", urlPatterns = "/users")
 public class UserServlet extends HttpServlet {
@@ -61,6 +61,11 @@ public class UserServlet extends HttpServlet {
                 case "delete":
                     deleteUser(request, response);
                     break;
+                case "search":
+                    searchByCountry(request, response);
+                    break;
+                case "sort":
+                    sortByName(request, response);
                 default:
                     listUser(request, response);
                     break;
@@ -68,6 +73,38 @@ public class UserServlet extends HttpServlet {
         } catch (SQLException ex) {
             throw new ServletException(ex);
         }
+
+
+    }
+
+    private void sortByName(HttpServletRequest request, HttpServletResponse response) {
+        String sortOption = request.getParameter("sort");
+        List<User> sortList = userRepository.sortByName(sortOption);
+        request.setAttribute("listUser", sortList);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void searchByCountry(HttpServletRequest request, HttpServletResponse response) {
+        String keyword = request.getParameter("search");
+        List<User> userList = userRepository.searchByCountry(keyword);
+        request.setAttribute("listUser", userList);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/list.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     private void listUser(HttpServletRequest request, HttpServletResponse response)

@@ -19,7 +19,38 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd640603-260d-47e9-afee-603ff573de44" name="Default Changelist" comment="" />
+    <list default="true" id="fd640603-260d-47e9-afee-603ff573de44" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/bai_tap/ung_dung_quan_ly_san_pham/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/bai_tap/ung_dung_quan_ly_san_pham/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/bai_tap/ung_dung_quan_ly_san_pham/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/bai_tap/ung_dung_quan_ly_san_pham/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/bai_tap/ung_dung_quan_ly_san_pham/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/bai_tap/ung_dung_quan_ly_san_pham/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/bai_tap/ung_dung_quan_ly_san_pham/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/bai_tap/ung_dung_quan_ly_san_pham/src/main/java/controller/ProductServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/bai_tap/ung_dung_quan_ly_san_pham/src/main/java/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/bai_tap/ung_dung_quan_ly_san_pham/src/main/java/repository/ICrudProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/bai_tap/ung_dung_quan_ly_san_pham/src/main/java/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/bai_tap/ung_dung_quan_ly_san_pham/src/main/java/repository/impl/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/bai_tap/ung_dung_quan_ly_san_pham/src/main/webapp/product/view.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/demo_tutor/main/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/demo_tutor/main/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/demo_tutor/main/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/demo_tutor/main/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/demo_tutor/main/main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/thuc_hanh/quan_ly_san_pham/src/main/java/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/thuc_hanh/quan_ly_san_pham/src/main/java/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/thuc_hanh/quan_ly_san_pham/src/main/java/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/thuc_hanh/quan_ly_san_pham/src/main/java/service/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/thuc_hanh/quan_ly_san_pham/src/main/webapp/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/thuc_hanh/quan_ly_san_pham/src/main/webapp/customer/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/thuc_hanh/quan_ly_san_pham/src/main/webapp/customer/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/thuc_hanh/quan_ly_san_pham/src/main/webapp/customer/error-404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/thuc_hanh/quan_ly_san_pham/src/main/webapp/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ss11_mvc/thuc_hanh/quan_ly_san_pham/src/main/webapp/customer/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss10_jsp_jstl/bai_tap/ung_dung_calculator/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ss10_jsp_jstl/bai_tap/ung_dung_calculator/.idea/gradle.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -157,6 +188,8 @@
       <updated>1649753501567</updated>
       <workItem from="1649753507960" duration="1162000" />
       <workItem from="1649757769888" duration="707000" />
+      <workItem from="1649899928089" duration="595000" />
+      <workItem from="1649904416340" duration="595000" />
     </task>
     <servers />
   </component>

@@ -21,9 +21,10 @@
 <body>
 <div class="container-fluid border-bottom border-dark">
     <div class=" row p-1 container-fluid d-flex justify-content-between ">
-        <div class="d-flex align-items-center">
-            <a href=""><img src="https://phuongviethcm.com/wp-content/uploads/2019/07/FURAMA.png" alt=""
-                            width="80px"></a>
+        <div class="col-auto col-sm-5 col-lg-3 d-flex align-items-center bestel-logo">
+<%--            logo furama--%>
+            <a href=""><img src="https://furamavietnam.com/wp-content/uploads/2018/10/logo.png" alt=""
+                            width="80px" class="img-fluid"></a>
         </div>
         <div class="d-flex align-items-center">
             <a href="">Nhật Hoàng <i class="fa fa-sign-in"></i></a>

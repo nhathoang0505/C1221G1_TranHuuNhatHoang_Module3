@@ -2,6 +2,7 @@ package service;
 
 import model.Customer;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface ICustomerService {
@@ -14,5 +15,5 @@ public interface ICustomerService {
 
     Customer selectCustomer(int id);
 
-    void updateCustomer(Customer updateCustomer);
+    void updateCustomer(Customer updateCustomer) throws SQLException;
 }

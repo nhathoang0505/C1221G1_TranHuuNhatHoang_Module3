@@ -98,6 +98,21 @@ public class Customer {
     public void setCustomerAddress(String customerAddress) {
         this.customerAddress = customerAddress;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "customerId=" + customerId +
+                ", customerTypeId=" + customerTypeId +
+                ", customerName='" + customerName + '\'' +
+                ", customerBirthday='" + customerBirthday + '\'' +
+                ", customerGender=" + customerGender +
+                ", customerIdCard='" + customerIdCard + '\'' +
+                ", customerPhone='" + customerPhone + '\'' +
+                ", customerEmail='" + customerEmail + '\'' +
+                ", customerAddress='" + customerAddress + '\'' +
+                '}';
+    }
 }
 
 

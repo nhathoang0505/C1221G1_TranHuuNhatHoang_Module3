@@ -35,7 +35,11 @@ public class CustomerServlet extends HttpServlet {
                 createCustomer(request, response);
                 break;
             case "edit":
-                updateProduct(request, response);
+                try {
+                    updateCustomer(request, response);
+                } catch (SQLException throwables) {
+                    throwables.printStackTrace();
+                }
                 break;
 //            case "delete":
 //                deleteProduct(request, response);
@@ -45,21 +49,21 @@ public class CustomerServlet extends HttpServlet {
         }
     }
 
-    private void updateProduct(HttpServletRequest request, HttpServletResponse response)
+    private void updateCustomer(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
-        Integer id = null;
+        Integer id = Integer.valueOf(request.getParameter("id"));
         Integer customerType = Integer.valueOf(request.getParameter("type"));
         String customerName = request.getParameter("name");
         String customerBirthday = request.getParameter("birthday");
         Byte customerGender = Byte.valueOf(request.getParameter("gender"));
-        String customerCard = request.getParameter("card");
+        String customerCard = request.getParameter("idcard");
         String customerPhone = request.getParameter("phone");
         String customerEmail = request.getParameter("email");
         String customerAddress = request.getParameter("address");
 
-        Customer updateCustomer = new Customer(id, customerType, customerName, customerBirthday,customerGender,customerCard,customerPhone,customerEmail,customerAddress);
+        Customer updateCustomer = new Customer(id, customerType, customerName, customerBirthday, customerGender, customerCard, customerPhone, customerEmail, customerAddress);
         customerService.updateCustomer(updateCustomer);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("edit.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/edit.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -121,6 +125,8 @@ public class CustomerServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Customer existingCustomer = customerService.selectCustomer(id);
 //        User existingUser = userRepository.getUserById(id);
+        List<CustomerType> customerTypeList = customerTypeService.getList();
+        request.setAttribute("customerTypeList", customerTypeList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/edit.jsp");
 
         request.setAttribute("customer", existingCustomer);
@@ -129,6 +135,7 @@ public class CustomerServlet extends HttpServlet {
         //User existingUser = userDAO.selectUser(id);
 
     }
+
     private void searchCustomerByName(HttpServletRequest request, HttpServletResponse response) {
         String keyword = request.getParameter("search");
         List<Customer> customerList = customerService.searchByName(keyword);

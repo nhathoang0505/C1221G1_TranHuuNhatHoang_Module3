@@ -14,8 +14,8 @@ import java.util.List;
 public class CustomerRepositoryImpl implements ICustomerRepository {
     private static final String SELECT_ALL_CUSTOMERS = "select ma_khach_hang,ma_loai_khach,ho_ten,ngay_sinh,gioi_tinh,so_cmnd,so_dien_thoai,email,dia_chi from khach_hang";
     private static final String ADD_CUSTOMER_SQL = "INSERT INTO khach_hang (ma_loai_khach,ho_ten,ngay_sinh,gioi_tinh,so_cmnd,so_dien_thoai,email,dia_chi) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
-    private static final String SELECT_CUSTOMER_BY_ID = "ma_khach_hang,ma_loai_khach,ho_ten,ngay_sinh,gioi_tinh,so_cmnd,so_dien_thoai,email,dia_chi from khach_hang where ma_khach_hang =?";
-    private static final String UPDATE_CUSTOMERS_SQL = "update customers set ma_loai_khach = ?,ho_ten= ?, ngay_sinh =?, gioi_tinh =?, so_cmnd =?, so_dien_thoai =?, email =?, dia_chi =? where ma_khach_hang = ?;";
+    private static final String SELECT_CUSTOMER_BY_ID = "select ma_khach_hang,ma_loai_khach,ho_ten,ngay_sinh,gioi_tinh,so_cmnd,so_dien_thoai,email,dia_chi from khach_hang where ma_khach_hang =?";
+    private static final String UPDATE_CUSTOMERS_SQL = "update khach_hang set ma_loai_khach = ?,ho_ten= ?, ngay_sinh =?, gioi_tinh =?, so_cmnd =?, so_dien_thoai =?, email =?, dia_chi =? where ma_khach_hang = ?;";
     BaseRepository baseRepository = new BaseRepository();
 
     @Override
@@ -137,6 +137,7 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
     @Override
     public boolean updateCustomer(Customer updateCustomer) throws SQLException {
         boolean rowUpdated;
+        System.out.println(updateCustomer);
         try (Connection connection = baseRepository.getConnection(); PreparedStatement statement = connection.prepareStatement(UPDATE_CUSTOMERS_SQL);) {
             statement.setInt(1, updateCustomer.getCustomerTypeId());
             statement.setString(2, updateCustomer.getCustomerName());
@@ -146,6 +147,7 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
             statement.setString(6, updateCustomer.getCustomerPhone());
             statement.setString(7, updateCustomer.getCustomerEmail());
             statement.setString(8, updateCustomer.getCustomerAddress());
+            statement.setInt(9, updateCustomer.getCustomerId());
 
             rowUpdated = statement.executeUpdate() > 0;
         }

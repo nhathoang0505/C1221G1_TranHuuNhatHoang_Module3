@@ -19,36 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd640603-260d-47e9-afee-603ff573de44" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/casestudy_jsp_servlet/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casestudy_jsp_servlet/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_jsp_servlet/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casestudy_jsp_servlet/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_jsp_servlet/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casestudy_jsp_servlet/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_jsp_servlet/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casestudy_jsp_servlet/build/libs/case-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_jsp_servlet/build/libs/case-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/casestudy_jsp_servlet/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_jsp_servlet/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/build/classes/java/main/controller/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/build/classes/java/main/controller/UserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/build/classes/java/main/repository/IUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/build/classes/java/main/repository/IUserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/build/classes/java/main/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/build/classes/java/main/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/build/libs/QuanLyUser-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/build/libs/QuanLyUser-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/src/main/java/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/src/main/java/controller/UserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/src/main/java/repository/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/src/main/java/repository/IUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/src/main/java/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/src/main/java/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/src/main/webapp/user/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ss12_jdbc_crud/thuc_hanh/quan_ly_user_jsp_servlet_jdbc_mysql/src/main/webapp/user/edit.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="fd640603-260d-47e9-afee-603ff573de44" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -189,6 +160,7 @@
       <workItem from="1649899928089" duration="595000" />
       <workItem from="1649904416340" duration="595000" />
       <workItem from="1650251877758" duration="11000" />
+      <workItem from="1650444684814" duration="594000" />
     </task>
     <servers />
   </component>

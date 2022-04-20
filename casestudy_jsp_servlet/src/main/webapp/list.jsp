@@ -42,6 +42,7 @@
         <th scope="col">Customer Phone Number</th>
         <th scope="col">Customer Email</th>
         <th scope="col">Customer Address</th>
+        <th>Actions</th>
     </thead>
     </tr>
     <tbody>
@@ -66,6 +67,7 @@
             <td>${customer.customerPhone}</td>
             <td>${customer.customerEmail}</td>
             <td>${customer.customerAddress}</td>
+            <td><a href="/customers?action=edit&id=${customer.customerId}">Edit</a>
         </tr>
     </c:forEach>
     </tbody>

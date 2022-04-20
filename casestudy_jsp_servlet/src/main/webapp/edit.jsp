@@ -32,11 +32,18 @@
             </c:if>
             <tr>
                 <th>Customer Type:</th>
-                <td>
-                    <input type="text" name="type" size="45"
-                           value="${customer.customerTypeId}"
-                    />
-                </td>
+                <td><select name="type" id="type">
+                    <c:forEach var="customerType" items="${customerTypeList}">
+                        <c:if test="${customerType.customerTypeId==customer.customerTypeId}">
+                            <option value="${customerType.customerTypeId}"
+                                    selected>${customerType.customerTypeName}</option>
+                        </c:if>
+                        <c:if test="${customerType.customerTypeId!=customer.customerTypeId}">
+                            <option value="${customerType.customerTypeId}"
+                            >${customerType.customerTypeName}</option>
+                        </c:if>
+                    </c:forEach>
+                </select></td>
             </tr>
             <tr>
                 <th>Customer Name:</th>
@@ -49,39 +56,51 @@
             <tr>
                 <th>Customer Birthday:</th>
                 <td>
-                    <input type="text" name="birthday" size="15"
+                    <input type="date" name="birthday" size="15"
                            value="<c:out value='${customer.customerBirthday}' />"
                     />
                 </td>
-            </tr><tr>
+            </tr>
+            <tr>
                 <th>Customer Gender:</th>
                 <td>
-                    <input type="text" name="gender" size="15"
-                           value="<c:out value='${customer.customerGender}' />"
-                    />
+                    <c:if test="${customer.customerGender ==1}">
+                        <c:set var="isMale" value="selected"></c:set>
+                    </c:if>
+                    <c:if test="${customer.customerGender !=1}">
+                        <c:set var="isFemale" value="selected"></c:set>
+                    </c:if>
+                    <select name="gender">
+                        <option value="0" ${isFemale}>Female</option>
+                        <option value="1" ${isMale}>Male</option>
+                    </select>
                 </td>
-            </tr><tr>
+            </tr>
+            <tr>
                 <th>Customer IdCard:</th>
                 <td>
                     <input type="text" name="idcard" size="15"
                            value="<c:out value='${customer.customerIdCard}' />"
                     />
                 </td>
-            </tr><tr>
+            </tr>
+            <tr>
                 <th>Customer Phone:</th>
                 <td>
                     <input type="text" name="phone" size="15"
                            value="<c:out value='${customer.customerPhone}' />"
                     />
                 </td>
-            </tr><tr>
+            </tr>
+            <tr>
                 <th>Customer Email:</th>
                 <td>
                     <input type="text" name="email" size="15"
                            value="<c:out value='${customer.customerEmail}' />"
                     />
                 </td>
-            </tr><tr>
+            </tr>
+            <tr>
                 <th>Customer Address:</th>
                 <td>
                     <input type="text" name="address" size="15"

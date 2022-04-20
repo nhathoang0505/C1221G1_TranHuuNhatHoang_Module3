@@ -2,6 +2,7 @@ package repository;
 
 import model.Customer;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface ICustomerRepository extends ICRUDRepository<Customer> {
@@ -12,5 +13,5 @@ public interface ICustomerRepository extends ICRUDRepository<Customer> {
 
     Customer selectCustomer(int id);
 
-    boolean updateCustomer(Customer updateCustomer);
+    boolean updateCustomer(Customer updateCustomer) throws SQLException;
 }

@@ -5,6 +5,7 @@ import repository.ICustomerRepository;
 import repository.impl.CustomerRepositoryImpl;
 import service.ICustomerService;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class CustomerServiceImpl implements ICustomerService {
@@ -31,7 +32,7 @@ public class CustomerServiceImpl implements ICustomerService {
     }
 
     @Override
-    public void updateCustomer(Customer updateCustomer) {
+    public void updateCustomer(Customer updateCustomer) throws SQLException {
         customerRepository.updateCustomer(updateCustomer);
     }
 }

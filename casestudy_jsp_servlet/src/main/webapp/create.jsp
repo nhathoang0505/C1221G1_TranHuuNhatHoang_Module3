@@ -51,7 +51,7 @@
                 <td>Customer Gender:</td>
                 <td><select name="gender" id="gender">
                     <option value="0">Female</option>
-                    <option value="1">Male</option>
+                    <option value="1" selected>Male</option>
                 </select></td>
             </tr>
             <tr>

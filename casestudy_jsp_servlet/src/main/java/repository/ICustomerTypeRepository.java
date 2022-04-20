@@ -1,4 +1,6 @@
 package repository;
 
-public interface ICustomerTypeRepository extends ICRUDRepository {
+import model.CustomerType;
+
+public interface ICustomerTypeRepository extends ICRUDRepository<CustomerType> {
 }

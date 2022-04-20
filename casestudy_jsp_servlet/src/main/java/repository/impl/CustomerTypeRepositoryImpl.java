@@ -16,7 +16,7 @@ public class CustomerTypeRepositoryImpl implements ICustomerTypeRepository {
     BaseRepository baseRepository = new BaseRepository();
 
     @Override
-    public List getList() {
+    public List<CustomerType> getList() {
         PreparedStatement preparedStatement = null;
         List<CustomerType> customerTypeList = new ArrayList<>();
         try {

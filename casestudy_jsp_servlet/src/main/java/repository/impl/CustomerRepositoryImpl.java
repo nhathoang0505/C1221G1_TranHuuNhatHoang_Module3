@@ -14,6 +14,8 @@ import java.util.List;
 public class CustomerRepositoryImpl implements ICustomerRepository {
     private static final String SELECT_ALL_CUSTOMERS = "select ma_khach_hang,ma_loai_khach,ho_ten,ngay_sinh,gioi_tinh,so_cmnd,so_dien_thoai,email,dia_chi from khach_hang";
     private static final String ADD_CUSTOMER_SQL = "INSERT INTO khach_hang (ma_loai_khach,ho_ten,ngay_sinh,gioi_tinh,so_cmnd,so_dien_thoai,email,dia_chi) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+    private static final String SELECT_CUSTOMER_BY_ID = "ma_khach_hang,ma_loai_khach,ho_ten,ngay_sinh,gioi_tinh,so_cmnd,so_dien_thoai,email,dia_chi from khach_hang where ma_khach_hang =?";
+    private static final String UPDATE_CUSTOMERS_SQL = "update customers set ma_loai_khach = ?,ho_ten= ?, ngay_sinh =?, gioi_tinh =?, so_cmnd =?, so_dien_thoai =?, email =?, dia_chi =? where ma_khach_hang = ?;";
     BaseRepository baseRepository = new BaseRepository();
 
     @Override
@@ -64,6 +66,105 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+
+    @Override
+    public List<Customer> searchCustomerByName(String keyword) {
+        // using try-with-resources to avoid closing resources (boiler plate code)
+        List<Customer> customers = new ArrayList<>();
+        // Step 1: Establishing a Connection
+        try (Connection connection = baseRepository.getConnection();
+
+             // Step 2:Create a statement using connection object
+             PreparedStatement preparedStatement = connection.
+                     prepareStatement("select * from khach_hang  where ho_ten like ?");) {
+            preparedStatement.setString(1, "%" + keyword + "%");
+            System.out.println(preparedStatement);
+            // Step 3: Execute the query or update query
+            ResultSet rs = preparedStatement.executeQuery();
+
+            // Step 4: Process the ResultSet object.
+            while (rs.next()) {
+                int customerId = rs.getInt("ma_khach_hang");
+                int customerTypeId = rs.getInt("ma_loai_khach");
+                String customerName = rs.getString("ho_ten");
+                String customerBirthday = rs.getString("ngay_sinh");
+                Byte customerGender = rs.getByte("gioi_tinh");
+                String customerIdCard = rs.getString("so_cmnd");
+                String customerPhone = rs.getString("so_dien_thoai");
+                String customerEmail = rs.getString("email");
+                String customerAddress = rs.getString("dia_chi");
+                customers.add(new Customer(customerId, customerTypeId, customerName, customerBirthday, customerGender, customerIdCard, customerPhone, customerEmail, customerAddress));
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+        return customers;
+    }
+
+    @Override
+    public Customer selectCustomer(int id) {
+        Customer customer = null;
+        // Step 1: Establishing a Connection
+        try (Connection connection = baseRepository.getConnection();
+             // Step 2:Create a statement using connection object
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_CUSTOMER_BY_ID);) {
+            preparedStatement.setInt(1, id);
+            System.out.println(preparedStatement);
+            // Step 3: Execute the query or update query
+            ResultSet rs = preparedStatement.executeQuery();
+
+            // Step 4: Process the ResultSet object.
+            while (rs.next()) {
+                int customerId = rs.getInt("ma_khach_hang");
+                int customerTypeId = rs.getInt("ma_loai_khach");
+                String customerName = rs.getString("ho_ten");
+                String customerBirthday = rs.getString("ngay_sinh");
+                Byte customerGender = rs.getByte("gioi_tinh");
+                String customerIdCard = rs.getString("so_cmnd");
+                String customerPhone = rs.getString("so_dien_thoai");
+                String customerEmail = rs.getString("email");
+                String customerAddress = rs.getString("dia_chi");
+                customer = new Customer(customerId, customerTypeId, customerName, customerBirthday, customerGender, customerIdCard, customerPhone, customerEmail, customerAddress);
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+        return customer;
+    }
+
+    @Override
+    public boolean updateCustomer(Customer updateCustomer) throws SQLException {
+        boolean rowUpdated;
+        try (Connection connection = baseRepository.getConnection(); PreparedStatement statement = connection.prepareStatement(UPDATE_CUSTOMERS_SQL);) {
+            statement.setInt(1, updateCustomer.getCustomerTypeId());
+            statement.setString(2, updateCustomer.getCustomerName());
+            statement.setString(3, updateCustomer.getCustomerBirthday());
+            statement.setByte(4, updateCustomer.getCustomerGender());
+            statement.setString(5, updateCustomer.getCustomerIdCard());
+            statement.setString(6, updateCustomer.getCustomerPhone());
+            statement.setString(7, updateCustomer.getCustomerEmail());
+            statement.setString(8, updateCustomer.getCustomerAddress());
+
+            rowUpdated = statement.executeUpdate() > 0;
+        }
+        return rowUpdated;
+    }
+
+    private void printSQLException(SQLException ex) {
+        for (Throwable e : ex) {
+            if (e instanceof SQLException) {
+                e.printStackTrace(System.err);
+                System.err.println("SQLState: " + ((SQLException) e).getSQLState());
+                System.err.println("Error Code: " + ((SQLException) e).getErrorCode());
+                System.err.println("Message: " + e.getMessage());
+                Throwable t = ex.getCause();
+                while (t != null) {
+                    System.out.println("Cause: " + t);
+                    t = t.getCause();
+                }
+            }
         }
     }
 }

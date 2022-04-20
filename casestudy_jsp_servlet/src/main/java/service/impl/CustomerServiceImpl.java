@@ -19,4 +19,19 @@ public class CustomerServiceImpl implements ICustomerService {
     public void add(Customer customer) {
         customerRepository.add(customer);
     }
+
+    @Override
+    public List<Customer> searchByName(String keyword) {
+        return customerRepository.searchCustomerByName(keyword);
+    }
+
+    @Override
+    public Customer selectCustomer(int id) {
+        return customerRepository.selectCustomer(id);
+    }
+
+    @Override
+    public void updateCustomer(Customer updateCustomer) {
+        customerRepository.updateCustomer(updateCustomer);
+    }
 }

@@ -34,11 +34,9 @@
             <tr>
                 <td>Customer Type:</td>
                 <td><select name="type" id="type">
-                    <option value="1">Diamond</option>
-                    <option value="2">Platinium</option>
-                    <option value="3">Gold</option>
-                    <option value="4">Silver</option>
-                    <option value="5">Member</option>
+                    <c:forEach var="customerType" items="${customerTypeList}">
+                        <option value="${customerType.customerTypeId}">${customerType.customerTypeName}</option>
+                    </c:forEach>
                 </select></td>
             </tr>
             <tr>
@@ -52,8 +50,8 @@
             <tr>
                 <td>Customer Gender:</td>
                 <td><select name="gender" id="gender">
+                    <option value="0">Female</option>
                     <option value="1">Male</option>
-                    <option value="2">Female</option>
                 </select></td>
             </tr>
             <tr>

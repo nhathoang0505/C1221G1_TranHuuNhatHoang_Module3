@@ -16,6 +16,7 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
     private static final String ADD_CUSTOMER_SQL = "INSERT INTO khach_hang (ma_loai_khach,ho_ten,ngay_sinh,gioi_tinh,so_cmnd,so_dien_thoai,email,dia_chi) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
     private static final String SELECT_CUSTOMER_BY_ID = "select ma_khach_hang,ma_loai_khach,ho_ten,ngay_sinh,gioi_tinh,so_cmnd,so_dien_thoai,email,dia_chi from khach_hang where ma_khach_hang =?";
     private static final String UPDATE_CUSTOMERS_SQL = "update khach_hang set ma_loai_khach = ?,ho_ten= ?, ngay_sinh =?, gioi_tinh =?, so_cmnd =?, so_dien_thoai =?, email =?, dia_chi =? where ma_khach_hang = ?;";
+    private static final String DELETE_USERS_SQL = "delete from khach_hang where ma_khach_hang = ?;";
     BaseRepository baseRepository = new BaseRepository();
 
     @Override
@@ -152,6 +153,16 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
             rowUpdated = statement.executeUpdate() > 0;
         }
         return rowUpdated;
+    }
+
+    @Override
+    public boolean deleteCustomer(int id) throws SQLException {
+        boolean rowDeleted;
+        try (Connection connection = baseRepository.getConnection(); PreparedStatement statement = connection.prepareStatement(DELETE_USERS_SQL);) {
+            statement.setInt(1, id);
+            rowDeleted = statement.executeUpdate() > 0;
+        }
+        return rowDeleted;
     }
 
     private void printSQLException(SQLException ex) {

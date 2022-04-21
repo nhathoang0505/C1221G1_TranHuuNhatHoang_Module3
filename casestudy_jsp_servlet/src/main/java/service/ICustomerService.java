@@ -16,4 +16,6 @@ public interface ICustomerService {
     Customer selectCustomer(int id);
 
     void updateCustomer(Customer updateCustomer) throws SQLException;
+
+    void deleteCustomer(int id) throws SQLException;
 }

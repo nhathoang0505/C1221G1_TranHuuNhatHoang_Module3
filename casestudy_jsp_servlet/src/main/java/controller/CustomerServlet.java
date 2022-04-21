@@ -41,11 +41,25 @@ public class CustomerServlet extends HttpServlet {
                     throwables.printStackTrace();
                 }
                 break;
-//            case "delete":
-//                deleteProduct(request, response);
-//                break;
+            case "delete":
+                deleteCustomer(request, response);
+                break;
             default:
                 break;
+        }
+    }
+
+    private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        try {
+            customerService.deleteCustomer(id);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        try {
+            response.sendRedirect("/customers");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -63,7 +77,7 @@ public class CustomerServlet extends HttpServlet {
 
         Customer updateCustomer = new Customer(id, customerType, customerName, customerBirthday, customerGender, customerCard, customerPhone, customerEmail, customerAddress);
         customerService.updateCustomer(updateCustomer);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/edit.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("view/customer/edit.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -105,7 +119,6 @@ public class CustomerServlet extends HttpServlet {
                 }
                 break;
 //            case "delete":
-//                showDeleteForm(request, response);
 //                break;
 //            case "view":
 ////                viewProduct(request, response);
@@ -127,7 +140,7 @@ public class CustomerServlet extends HttpServlet {
 //        User existingUser = userRepository.getUserById(id);
         List<CustomerType> customerTypeList = customerTypeService.getList();
         request.setAttribute("customerTypeList", customerTypeList);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/edit.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("view/customer/edit.jsp");
 
         request.setAttribute("customer", existingCustomer);
         dispatcher.forward(request, response);
@@ -142,7 +155,7 @@ public class CustomerServlet extends HttpServlet {
         request.setAttribute("customersList", customerList);
         List<CustomerType> customerTypeList = customerTypeService.getList();
         request.setAttribute("customerTypeList", customerTypeList);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("list.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("view/customer/list.jsp");
         try {
             dispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -157,7 +170,7 @@ public class CustomerServlet extends HttpServlet {
         List<CustomerType> customerTypeList = customerTypeService.getList();
         request.setAttribute("customerTypeList", customerTypeList);
         try {
-            request.getRequestDispatcher("/create.jsp").forward(request, response);
+            request.getRequestDispatcher("view/customer/create.jsp").forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -171,7 +184,7 @@ public class CustomerServlet extends HttpServlet {
         List<CustomerType> customerTypeList = customerTypeService.getList();
         request.setAttribute("customerTypeList", customerTypeList);
         try {
-            request.getRequestDispatcher("list.jsp").forward(request, response);
+            request.getRequestDispatcher("view/customer/list.jsp").forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {

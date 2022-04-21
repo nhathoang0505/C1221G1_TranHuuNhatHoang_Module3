@@ -14,4 +14,6 @@ public interface ICustomerRepository extends ICRUDRepository<Customer> {
     Customer selectCustomer(int id);
 
     boolean updateCustomer(Customer updateCustomer) throws SQLException;
+
+    boolean deleteCustomer(int id) throws SQLException;
 }

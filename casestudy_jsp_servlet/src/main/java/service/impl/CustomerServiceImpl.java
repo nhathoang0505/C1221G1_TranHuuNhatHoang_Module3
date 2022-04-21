@@ -35,4 +35,9 @@ public class CustomerServiceImpl implements ICustomerService {
     public void updateCustomer(Customer updateCustomer) throws SQLException {
         customerRepository.updateCustomer(updateCustomer);
     }
+
+    @Override
+    public void deleteCustomer(int id) throws SQLException {
+        customerRepository.deleteCustomer(id);
+    }
 }

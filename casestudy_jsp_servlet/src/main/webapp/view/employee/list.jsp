@@ -7,7 +7,7 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"  %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html>
 <head>
     <title>Employee List</title>
@@ -16,17 +16,35 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css" type="text/css">
 
 </head>
-<body>
-<form action="/employee" method=""></form>
-
-<a href="/employee"><h1>Employee List</h1></a>
 <p>
-    <a href="/employee?action=create">Create new Employee</a>
+    <a href="/">Back to Home</a>
 </p>
-<form action="/employee" method="get">
-    <input type="text" placeholder="Input Employee's name" name="search">
-    <%--    <button type="submit">Search</button>--%>
-    <%--    <input type="hidden" name="action" value="search">--%>
+<body>
+<form action="/employees" method=""></form>
+
+<a href="/employees"><h1>Employee List</h1></a>
+<p>
+    <a href="/employees?action=create">Create new Employee</a>
+</p>
+
+<%--Form Search--%>
+<form action="/employees" method="get">
+    <input type="text" placeholder="Input Employee's name" name="searchName">
+
+    <select name="searchPosition" id="position">
+
+        <option value="%">--Choose Position--</option>
+
+        <c:forEach var="position" items="${positionsList}">
+            <option value="${position.positionId}">
+                    ${position.positionName}
+            </option>
+        </c:forEach>
+    </select>
+
+    <input type="text" placeholder="Input Employee's email" name="searchEmail">
+    <button type="submit">Search</button>
+    <input type="hidden" name="action" value="search">
 </form>
 
 <table class="table table-striped" id="example">
@@ -58,7 +76,7 @@
         <td>${employee.employeeName}</td>
         <td>${employee.employeeBirthday}</td>
         <td>${employee.employeeIdCard}</td>
-<%--        <td >${employee.employeeSalary}</td>--%>
+            <%--        <td >${employee.employeeSalary}</td>--%>
         <td><fmt:formatNumber value="${employee.employeeSalary}" type="number"/></td>
         <td>${employee.employeePhone}</td>
         <td>${employee.employeeEmail}</td>
@@ -81,38 +99,43 @@
                 <td><c:out value="${division.divisionName}"></c:out></td>
             </c:if>
         </c:forEach>
-            <td></td>
+        <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal"
+                    onclick="confirmDelete(${employee.employeeId}, '${employee.employeeName}')">
+            Delete
+        </button></td>
     </tr>
     </c:forEach>
-</table>
-<%--<!-- Modal -->--%>
-<%--<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"--%>
-<%--     aria-hidden="true">--%>
-<%--    <div class="modal-dialog" role="document">--%>
-<%--        <div class="modal-content">--%>
-<%--            <div class="modal-header">--%>
-<%--                <h5 class="modal-title" id="exampleModalLabel">Confirm delete?</h5>--%>
-<%--                <button type="button" class="close" data-dismiss="modal" aria-label="Close">--%>
-<%--                    <span aria-hidden="true">&times;</span>--%>
-<%--                </button>--%>
-<%--            </div>--%>
-<%--            <form method="post">--%>
-<%--                <div class="modal-body">--%>
-<%--                    Do you really want to delete ?--%>
-<%--                    <div id="customerId"></div>--%>
-<%--                    <div id="customerName"></div>--%>
-<%--                    <input type="hidden" value="delete" name="action">--%>
-<%--                    <input type="hidden" id="idDelete" name="id">--%>
-<%--                </div>--%>
-<%--                <div class="modal-footer">--%>
 
-<%--                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>--%>
-<%--                    <button type="submit" class="btn btn-primary">Delete</button>--%>
-<%--                </div>--%>
-<%--            </form>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--</div>--%>
+
+
+</table>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirm delete?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="post">
+                <div class="modal-body">
+                    Confirm delete ?
+                    <div id="employeeId"></div>
+                    <div id="employeeName"></div>
+                    <input type="hidden" value="delete" name="action">
+                    <input type="hidden" id="idDelete" name="id">
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Delete</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>
 <%--bootrap 4.6 + 3.5  + phân trang--%>
@@ -127,8 +150,8 @@
 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
 <script>
     function confirmDelete(id, name) {
-        document.getElementById("customerId").innerText = "Id customer: " + id;
-        document.getElementById("customerName").innerText = "Customer name: " + name;
+        document.getElementById("employeeId").innerText = "Employee Id: " + id;
+        document.getElementById("employeeName").innerText = "Employee name: " + name;
         document.getElementById("idDelete").value = id;
     }
 </script>

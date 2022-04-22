@@ -27,7 +27,7 @@
     <a href="/">Back to Home</a>
 </p>
 <p>
-    <a href="/customers">Back to products list</a>
+    <a href="/customers">Back to Customer list</a>
 </p>
 <form method="post">
     <%--    fieldset: Tạo đường viền bao ở ngoài--%>
@@ -38,10 +38,13 @@
                 <td>Customer Type:</td>
                 <td><select name="type" id="type">
                     <c:forEach var="customerType" items="${customerTypeList}">
-                        <option value="${customerType.customerTypeId}">${customerType.customerTypeName}</option>
+                        <option value="${customerType.customerTypeId}">
+                                ${customerType.customerTypeName}
+                        </option>
                     </c:forEach>
                 </select></td>
             </tr>
+
             <tr>
                 <td>Customer Name:</td>
                 <td><input type="text" name="name"></td>

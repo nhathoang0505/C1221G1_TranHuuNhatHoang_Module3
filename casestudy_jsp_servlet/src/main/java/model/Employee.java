@@ -5,7 +5,7 @@ import java.util.Date;
 public class Employee {
     private Integer employeeId;
     private String employeeName;
-    private Date employeeBirthday;
+    private String employeeBirthday;
     private String employeeIdCard;
     private Double employeeSalary;
     private String employeePhone;
@@ -15,7 +15,7 @@ public class Employee {
     private Integer employeeEducationDegreeId;
     private Integer employeeDivisionId;
 
-    public Employee(Integer employeeId, String employeeName, Date employeeBirthday, String employeeIdCard, Double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress, Integer employeePositionId, Integer employeeEducationDegreeId, Integer employeeDivisionId) {
+    public Employee(Integer employeeId, String employeeName, String employeeBirthday, String employeeIdCard, Double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress, Integer employeePositionId, Integer employeeEducationDegreeId, Integer employeeDivisionId) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.employeeBirthday = employeeBirthday;
@@ -48,11 +48,11 @@ public class Employee {
         this.employeeName = employeeName;
     }
 
-    public Date getEmployeeBirthday() {
+    public String getEmployeeBirthday() {
         return employeeBirthday;
     }
 
-    public void setEmployeeBirthday(Date employeeBirthday) {
+    public void setEmployeeBirthday(String employeeBirthday) {
         this.employeeBirthday = employeeBirthday;
     }
 

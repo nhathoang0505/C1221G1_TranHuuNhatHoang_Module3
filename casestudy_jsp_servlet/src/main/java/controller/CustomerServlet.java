@@ -163,7 +163,6 @@ public class CustomerServlet extends HttpServlet {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private void showCreateForm(HttpServletRequest request, HttpServletResponse response) {

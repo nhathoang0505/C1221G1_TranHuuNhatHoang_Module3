@@ -19,7 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd640603-260d-47e9-afee-603ff573de44" name="Default Changelist" comment="" />
+    <list default="true" id="fd640603-260d-47e9-afee-603ff573de44" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/TaiLieuTrienKhaiModule3/CaseStudy-Database/~$-DN Case Study for Database_v1.2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy_jsp_servlet/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,6 +166,7 @@
       <workItem from="1649904416340" duration="595000" />
       <workItem from="1650251877758" duration="11000" />
       <workItem from="1650444684814" duration="594000" />
+      <workItem from="1650591857238" duration="27000" />
     </task>
     <servers />
   </component>
